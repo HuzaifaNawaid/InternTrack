@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#93000a",
+                    "on-tertiary": "#263143",
+                    "on-primary": "#3c2f00",
+                    "outline": "#9a9078",
+                    "on-error": "#690005",
+                    "secondary-container": "#3f465c",
+                    "on-tertiary-container": "#4f5a6e",
+                    "primary": "#ffecb9",
+                    "background": "#051424",
+                    "on-primary-fixed": "#231b00",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "outline-variant": "#4d4632",
+                    "on-secondary": "#283044",
+                    "on-primary-fixed-variant": "#574500",
+                    "inverse-primary": "#735c00",
+                    "error": "#ffb4ab",
+                    "on-error-container": "#ffdad6",
+                    "surface-tint": "#eec200",
+                    "on-surface": "#d4e4fa",
+                    "surface-container-low": "#0d1c2d",
+                    "tertiary": "#e6edff",
+                    "primary-container": "#facc15",
+                    "on-secondary-container": "#adb4ce",
+                    "primary-fixed-dim": "#eec200",
+                    "tertiary-container": "#c6d1e9",
+                    "on-surface-variant": "#d1c6ab",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "on-tertiary-fixed": "#111c2d",
+                    "tertiary-fixed-dim": "#bcc7de",
+                    "on-primary-container": "#6c5700",
+                    "inverse-surface": "#d4e4fa",
+                    "surface-bright": "#2c3a4c",
+                    "tertiary-fixed": "#d8e3fb",
+                    "surface": "#051424",
+                    "surface-container": "#122131",
+                    "secondary-fixed": "#dae2fd",
+                    "surface-container-lowest": "#010f1f",
+                    "primary-fixed": "#ffe083",
+                    "surface-container-high": "#1c2b3c",
+                    "surface-variant": "#273647",
+                    "on-secondary-fixed": "#131b2e",
+                    "surface-dim": "#051424",
+                    "on-background": "#d4e4fa",
+                    "inverse-on-surface": "#233143",
+                    "on-tertiary-fixed-variant": "#3c475a",
+                    "surface-container-highest": "#273647",
+                    "secondary": "#bec6e0"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "sm": "0.5rem",
+                    "base": "4px",
+                    "xl": "2rem",
+                    "md": "1rem",
+                    "gutter": "24px",
+                    "lg": "1.5rem",
+                    "xs": "0.25rem",
+                    "margin": "32px",
+                    "2xl": "3rem"
+            },
+            "fontFamily": {
+                    "h3": ["Inter"],
+                    "body-md": ["Inter"],
+                    "h1": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h2": ["Inter"],
+                    "caption": ["Inter"]
+            },
+            "fontSize": {
+                    "h3": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                    "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                    "h2": ["30px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "caption": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #051424; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        input:focus { outline: none; border-color: #facc15 !important; }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #4d4632; border-radius: 10px; }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- SideNavBar Shell -->
+<aside class="bg-surface-container-low dark:bg-surface-container-low h-screen w-64 fixed left-0 top-0 flex flex-col h-full p-lg border-r border-outline-variant z-50">
+<div class="mb-2xl">
+<h1 class="font-h2 text-h2 font-black text-primary dark:text-primary">InternTrack</h1>
+<p class="font-body-md text-on-surface-variant opacity-70">Professional Suite</p>
+</div>
+<nav class="flex flex-col gap-sm flex-grow">
+<a class="flex items-center gap-md px-md py-sm text-on-surface-variant hover:text-on-surface transition-colors transition-all duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-body-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm text-on-surface-variant hover:text-on-surface transition-colors transition-all duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-body-md">Applications</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm text-on-surface-variant hover:text-on-surface transition-colors transition-all duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="event">event</span>
+<span class="font-body-md">Interviews</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm text-on-surface-variant hover:text-on-surface transition-colors transition-all duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="business">business</span>
+<span class="font-body-md">Companies</span>
+</a>
+<a class="flex items-center gap-md px-md py-sm bg-primary text-on-primary rounded-xl font-bold transition-all duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="settings" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-body-md">Settings</span>
+</a>
+</nav>
+<div class="mt-auto">
+<button class="w-full py-md bg-primary-container text-on-primary-container rounded-xl font-bold flex items-center justify-center gap-sm transition-all duration-200 active:scale-95">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+<span>Create New</span>
+</button>
+</div>
+</aside>
+<!-- TopAppBar Shell -->
+<header class="bg-surface-container-low dark:bg-surface-container-low fixed top-0 right-0 z-40 flex justify-between items-center h-16 px-margin w-[calc(100%-16rem)] ml-64 border-b border-outline-variant">
+<div class="flex items-center flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-md top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="search">search</span>
+<input class="w-full bg-surface-container h-10 pl-11 pr-md rounded-full border-none text-body-md focus:ring-1 focus:ring-primary-container" placeholder="Search internships, companies..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<div class="flex items-center gap-xs">
+<button class="hover:bg-surface-variant dark:hover:bg-surface-variant rounded-full p-xs text-on-surface-variant transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="hover:bg-surface-variant dark:hover:bg-surface-variant rounded-full p-xs text-on-surface-variant transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</button>
+<button class="hover:bg-surface-variant dark:hover:bg-surface-variant rounded-full p-xs text-on-surface-variant transition-all duration-200">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant mx-sm"></div>
+<div class="flex items-center gap-md">
+<span class="text-on-surface font-label-sm">Alex Rivera</span>
+<div class="w-10 h-10 rounded-full border-2 border-primary-container overflow-hidden">
+<img alt="User Avatar" data-alt="A professional close-up portrait of a young male student with a focused expression, wearing a modern minimalist navy polo shirt. The background is a soft-focus corporate environment with cool blue and charcoal tones, reflecting a high-intensity professional SaaS aesthetic. Lighting is sharp and cinematic, emphasizing clean lines and high-fidelity textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhsNavKOMJdElMCAfhaBTzfx0qndyVYPfv6Gg89MRWv8Of1fO3C4IBk14HPuJxBE4Kq2i52d1aJOtdULw9KK2ynWDtYxmYalvnMgYyLpS96JRvyoDipG1my39Pn-cuY6JqWzllAlFBBkdlTrVRiUanijrVBlkw52wJQG2NZ31ar3cNT8hn4_2oyJ8aOmgZL_tHrj3eTgELXZNPVi0Q-_gYk_49XjJQCIZxrJR8V9L4mwgko0CcboSB4j0TWJ8CHZDFJPoIj8V-TgNd"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-16 min-h-screen">
+<div class="p-margin max-w-7xl mx-auto">
+<!-- Page Header -->
+<div class="mb-xl">
+<h2 class="font-h1 text-h1 text-on-surface mb-xs">Settings</h2>
+<p class="font-body-lg text-on-surface-variant">Manage your professional profile and application preferences.</p>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Left Column: Profile Card -->
+<div class="col-span-12 space-y-gutter lg:col-span-8 lg:col-start-3">
+<!-- Section: Profile -->
+<section class="bg-surface-container rounded-2xl border border-outline-variant overflow-hidden">
+<div class="p-lg border-b border-outline-variant flex justify-between items-center bg-surface-container-high/30">
+<h3 class="font-h3 text-h3 text-primary">Profile Details</h3>
+<button class="px-md py-sm bg-surface-variant text-on-surface-variant hover:text-on-surface rounded-xl transition-all font-bold text-sm">Edit Profile</button>
+</div>
+<div class="p-lg">
+<div class="flex flex-col md:flex-row gap-xl items-start">
+<div class="relative group">
+<div class="w-32 h-32 rounded-2xl border-2 border-outline-variant overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A high-resolution professional headshot of a male university student in his early twenties, set against a dark architectural background. The aesthetic is clean and corporate, featuring cool-toned lighting that highlights facial features with precision. The image follows a high-contrast SaaS design language with deep blacks and subtle highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvf66wVqV8isgOyXoY3ON8IZoUlO77pfrCnHr1m7pGzBys8J-C7OIVpY8aQz6aeYLutDfCSJQX29p8zFaPmuoGE4H88-VAGE9FsbjVl5ZZOhU9CAnNyQvzpKUe7GKCn0LfXzUzQY6PV9Q1NRsvoypc_huqq4WpxbvQuQJ5dIR9c2jPYJCQepFq07grMAoVzqRnW0dz_oV2-LuZn3vi1pZVp_fSuNvFmSAtbn1SHt2EBNxRiBlcxUGKr-SfPLlIkvfz0zkdODZb8ScK"/>
+</div>
+<button class="absolute -bottom-2 -right-2 bg-primary-container text-on-primary-container p-sm rounded-lg shadow-xl active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[18px]" data-icon="photo_camera">photo_camera</span>
+</button>
+</div>
+<div class="flex-grow grid grid-cols-1 md:grid-cols-2 gap-lg w-full">
+<div class="space-y-xs">
+<label class="text-caption text-on-surface-variant uppercase tracking-widest">Full Name</label>
+<p class="font-body-md text-on-surface font-semibold border-b border-outline-variant/30 pb-xs">Alex Rivera</p>
+</div>
+<div class="space-y-xs">
+<label class="text-caption text-on-surface-variant uppercase tracking-widest">Email Address</label>
+<p class="font-body-md text-on-surface font-semibold border-b border-outline-variant/30 pb-xs">a.rivera@university.edu</p>
+</div>
+<div class="space-y-xs">
+<label class="text-caption text-on-surface-variant uppercase tracking-widest">University</label>
+<p class="font-body-md text-on-surface font-semibold border-b border-outline-variant/30 pb-xs">Stanford University</p>
+</div>
+<div class="space-y-xs">
+<label class="text-caption text-on-surface-variant uppercase tracking-widest">Major</label>
+<p class="font-body-md text-on-surface font-semibold border-b border-outline-variant/30 pb-xs">Computer Science &amp; AI</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Account & Security -->
+<section class="bg-surface-container rounded-2xl border border-outline-variant">
+<div class="p-lg border-b border-outline-variant bg-surface-container-high/30">
+<h3 class="font-h3 text-h3 text-primary">Account &amp; Security</h3>
+</div>
+<div class="p-lg divide-y divide-outline-variant/30">
+<div class="py-md flex items-center justify-between">
+<div>
+<p class="font-body-md font-bold text-on-surface">Password</p>
+<p class="text-caption text-on-surface-variant">Last updated 3 months ago</p>
+</div>
+<button class="px-md py-sm border border-outline-variant hover:bg-surface-variant text-on-surface-variant rounded-xl transition-all text-sm font-bold">Change Password</button>
+</div>
+<div class="py-md flex items-center justify-between">
+<div>
+<p class="font-body-md font-bold text-on-surface">Two-Factor Authentication</p>
+<p class="text-caption text-on-surface-variant">Recommended for high-security accounts</p>
+</div>
+<button class="px-md py-sm bg-primary-container text-on-primary-container rounded-xl transition-all text-sm font-bold">Enable 2FA</button>
+</div>
+<div class="py-md flex items-center justify-between">
+<div>
+<p class="font-body-md font-bold text-on-surface">Privacy Mode</p>
+<p class="text-caption text-on-surface-variant">Hide your profile from recruiter searches</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Notifications & Status -->
+</div>
+<!-- Footer Actions -->
+<div class="mt-2xl flex justify-between items-center py-xl border-t border-outline-variant/30">
+<button class="flex items-center gap-sm text-error hover:opacity-80 transition-opacity font-bold">
+<span class="material-symbols-outlined" data-icon="delete_forever">delete_forever</span>
+<span>Deactivate Account</span>
+</button>
+<div class="flex gap-md">
+<button class="px-xl py-md border border-outline-variant text-on-surface-variant rounded-xl font-bold hover:bg-surface-variant transition-all">Cancel</button>
+<button class="px-xl py-md bg-primary-container text-on-primary-container rounded-xl font-bold hover:brightness-110 transition-all active:scale-95 shadow-lg shadow-primary-container/10">Save All Changes</button>
+</div>
+</div>
+</div>
+</main>
+</body></html>
