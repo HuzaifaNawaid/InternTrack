@@ -1,4 +1,4 @@
-# InternTrack
+# InternTrack (A Smart Platform for Internship Discovery, Tracking & Prep-aration)
 
 > **A centralized internship management platform connecting Pakistani university students with the corporate sector.**
 
